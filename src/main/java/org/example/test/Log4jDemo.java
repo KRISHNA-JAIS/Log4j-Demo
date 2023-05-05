@@ -8,6 +8,10 @@ public class Log4jDemo {
 
     public static void main(String[] args) {
         System.out.println("Started.................");
+        testLog();
+    }
+
+    public static void testLog() {
         logger.trace("This is trace Level");
         logger.debug("This is debug level");
         logger.info("This is info level");

@@ -1,4 +1,4 @@
-17:14:43.779 [main] TRACE org.example.test.Log4jDemo - This is trace Level
-17:14:43.781 [main] DEBUG org.example.test.Log4jDemo - This is debug level
-17:14:43.781 [main] INFO  org.example.test.Log4jDemo - This is info level
-17:14:43.781 [main] WARN  org.example.test.Log4jDemo - This is warn level
+18:27:19.176 [main] TRACE org.example.test.Log4jDemo - This is trace Level
+18:27:19.178 [main] DEBUG org.example.test.Log4jDemo - This is debug level
+18:27:19.178 [main] INFO  org.example.test.Log4jDemo - This is info level
+18:27:19.178 [main] WARN  org.example.test.Log4jDemo - This is warn level
