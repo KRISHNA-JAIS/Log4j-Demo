@@ -1,0 +1,33 @@
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss:SSS} %-5level %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="ACCEPT"/>
+            </Filters>
+        </Console>
+        <File name="LogToFile" fileName="/home/knoldus/Downloads/Log4j-demo/src/main/resources/output.log">
+            <PatternLayout pattern="%d{HH:mm:ss:SSS} %-5level %msg%n"/>
+            <Append>false</Append>
+            <Filters>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="ACCEPT"/>
+            </Filters>
+        </File>
+        <RollingFile name="LogToRollingFile" fileName="/home/knoldus/Downloads/Log4j-demo/src/main/resources/RollingOutput.log"
+                     filePattern="/home/knoldus/Downloads/Log4j-demo/src/main/resources/RollingOutput-%d{HH:mm:ss:SSS}.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <SizeBasedTriggeringPolicy size="1 KB"/>
+            <Append>true</Append>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="ACCEPT" />
+            </Filters>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToRollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
